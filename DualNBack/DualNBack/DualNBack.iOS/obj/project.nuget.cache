@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "RwASYbIzu3TcZwljD60kuXcP1ZkVUEKKcS4mtQ+THKJCpR2QjSgiR0c3V6CiXsRvm/+lRZiDqlKRtPmg3SJdXQ==",
+  "success": true,
+  "projectFilePath": "C:\\Work\\Dual-N-Back\\DualNBack\\DualNBack\\DualNBack.iOS\\DualNBack.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\maior\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512"
+  ],
+  "logs": []
+}

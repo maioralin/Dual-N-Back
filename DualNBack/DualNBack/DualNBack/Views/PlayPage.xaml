@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="DualNBack.Views.PlayPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="BackgroundColor">#1e1e1e</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Label FontSize="24" Text="{Binding NBackText}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Grid x:Name="mainGrid" VerticalOptions="CenterAndExpand" BackgroundColor="Black" RowSpacing="2" ColumnSpacing="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <BoxView Grid.Row="0" Grid.Column="0" Color="{Binding Colors[0]}"></BoxView>
+                <BoxView Grid.Row="0" Grid.Column="1" Color="{Binding Colors[1]}"></BoxView>
+                <BoxView Grid.Row="0" Grid.Column="2" Color="{Binding Colors[2]}"></BoxView>
+                <BoxView Grid.Row="1" Grid.Column="0" Color="{Binding Colors[3]}"></BoxView>
+                <BoxView Grid.Row="1" Grid.Column="1" Color="{Binding Colors[4]}"></BoxView>
+                <BoxView Grid.Row="1" Grid.Column="2" Color="{Binding Colors[5]}"></BoxView>
+                <BoxView Grid.Row="2" Grid.Column="0" Color="{Binding Colors[6]}"></BoxView>
+                <BoxView Grid.Row="2" Grid.Column="1" Color="{Binding Colors[7]}"></BoxView>
+                <BoxView Grid.Row="2" Grid.Column="2" Color="{Binding Colors[8]}"></BoxView>
+            </Grid>
+            <Button Text="Play" TextColor="White" BackgroundColor="{StaticResource Primary}" IsVisible="{Binding Waiting}" Command="{Binding PlayCommand}"></Button>
+            <StackLayout HorizontalOptions="Fill" IsVisible="{Binding PlayStarted}" Orientation="Horizontal">
+                <Button Text="Position Match" TextColor="White" BackgroundColor="{StaticResource Primary}" HorizontalOptions="FillAndExpand" Command="{Binding PositionCommand}"></Button>
+                <Button Text="Color Match" TextColor="White" BackgroundColor="{StaticResource Primary}" HorizontalOptions="FillAndExpand" Command="{Binding ColorCommand}"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
