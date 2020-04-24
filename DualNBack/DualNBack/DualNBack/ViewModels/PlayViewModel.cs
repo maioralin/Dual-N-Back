@@ -165,7 +165,7 @@ namespace DualNBack.ViewModels
                 colorPressed = false;
             }
             double percentage = correctAnswers * 1.0 / totalAnswers * 100;
-            string message = $"{percentage} correct answers.";
+            string message = $"{percentage:N2}% correct answers.";
             if(percentage > 80)
             {
                 GlobalVars.CurrentLevel++;
